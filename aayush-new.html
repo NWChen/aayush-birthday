@@ -1,0 +1,66 @@
+<head>
+  <title>HAPPY BIRTHDAY.</title>
+  <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	  ga('create', 'UA-66374207-1', 'auto');
+	  ga('send', 'pageview');
+	</script>
+</head>
+
+<body>
+  <div class="container-fluid">
+	  <div class="col-md-12">
+			<video autoplay loop class="embed-responsive-item" poster="inparis.jpg">
+				<source src="inparis.mp4" type="video/mp4">
+			</video>
+				{{>address}}
+			<div class="vertical-center">
+				{{>memories}}
+		  </div>
+		  <div class="plug">
+  			<a href="https://github.com/NWChen" target="_blank">NEIL CHEN</a>
+  		</div>
+  	</div>
+  </div>
+</body>
+
+<template name="address">
+	<div class="row address">
+		<div class="col-md-12">
+			<p>AAYUSH BERI<span class="tickleme">.</span><span id="birthday"> <span class="tickleme">H</span>APPY BIRTHDAY.</span></p>
+			<h5><a href="https://youtu.be/-pTS4MVJ340">Ball so hard, you deserved a page all your own</a></h5>
+		</div>
+	</div>
+</template>
+
+<template name="memories">
+	<div class="modal fade" role="dialog">
+		<div class="modal-dialog vertical-center">
+			<div class="modal-content">
+				<div class="modal-body">
+					<img src="{{enlargedImage}}">
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row memories">
+		{{#each memories}}
+			{{>memory}}
+		{{/each}}
+	</div>
+</template>
+
+<template name="memory">
+  <div class="col-md-4">
+  	<div class="memory">
+	  	<h3>{{title}}</h3>
+	  	<img src="{{image}}">
+	  	<p>{{about}}</p>
+  	</div>
+  </div>
+</template>
